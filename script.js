@@ -156,3 +156,14 @@ if (document.readyState === "loading"){
   buildWorldGrid();
 }
 
+function markPageLoaded(){
+  document.body.classList.remove("is-loading");
+  document.body.classList.add("is-loaded");
+}
+
+if (document.readyState === "complete"){
+  markPageLoaded();
+} else {
+  window.addEventListener("load", markPageLoaded);
+}
+
