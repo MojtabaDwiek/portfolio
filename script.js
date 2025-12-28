@@ -98,58 +98,6 @@ if (hasGsap){
 
 
 
-wrapTextSpans("#page6>h1");
-
-if (hasGsap){
-  gsap.to("#page6>h1>span",{
-    scrollTrigger:{
-        trigger:`#page6>h1>span`,
-        start:`top bottom`,
-        end:`bottom top`,
-        scroller:`#main`,
-        scrub:.5,
-    },
-    stagger:.2,
-    color:`#111`
-  });
-}
-
-
-
-
-
-
-
-
-
-if (hasGsap){
-  gsap.to(".page7-cir",{
-    scrollTrigger:{
-      trigger:`.page7-cir`,
-      start:`top center`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5
-    },
-    scale:1.5
-  });
-}
-
-
-
-if (hasGsap){
-  gsap.to(".page7-cir-inner",{
-    scrollTrigger:{
-      trigger:`.page7-cir-inner`,
-      start:`top center`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5
-    },
-    backgroundColor : `#0a3bce91`,
-  });
-}
-
 function buildWorldGrid(){
   const grid = document.querySelector("#world-grid");
   if (!grid || grid.children.length) return;
@@ -207,3 +155,4 @@ if (document.readyState === "loading"){
 } else {
   buildWorldGrid();
 }
+
